@@ -35,23 +35,23 @@ Dependencies
 ------------
 1. SPI needs to be enabled on the Orange Pi Zero
   Please, check this - run command 
- 
- - ls -l /dev/spidev*
- 
+ ```
+ ls -l /dev/spidev*
+ ```
  and see result:
- 
-- crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
-- crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
- 
+ ```
+ crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
+ crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
+ ```
  If you see in list line /dev/spidev1.0 - all OK
 
 2. You need install my modified library WiringOP-Zero
-
-- git clone https://github.com/vladikoms/WiringOP-Zero.git
-- cd WiringOP-Zero
-- chmod +x ./build
-- sudo ./build
-
+```
+git clone https://github.com/vladikoms/WiringOP-Zero.git
+cd WiringOP-Zero
+chmod +x ./build
+sudo ./build
+```
 3. Run packet forwarder as root
 
 Connections
@@ -81,16 +81,16 @@ Please set location, email and description.
 
 Installing
 ----------
-
-- git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
-- cd single_chan_pkt_fwd
-- make
-
+```
+git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
+cd single_chan_pkt_fwd
+make
+```
 Run
 ---
-
-- sudo ./single_chan_pkt_fwd
-
+```
+sudo ./single_chan_pkt_fwd
+```
 License
 -------
 The source files in this repository are made available under the Eclipse
