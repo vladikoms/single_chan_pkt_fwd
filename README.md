@@ -10,8 +10,7 @@ Single Channel LoRaWAN Gateway
 This repository contains a proof-of-concept implementation of a single
 channel LoRaWAN gateway.
 
-It has been tested on the Raspberry Pi platform, using a Semtech SX1272
-transceiver (HopeRF RFM92W), and SX1276 (HopeRF RFM95W).
+It has been tested on the Orange Pi Zero 512MB platform (OS ARMBIAN 5.35 Debian GNU/Linux 8 (jessie) 3.4.113-sun8i), using a Semtech SX1278 transceiver (RA-02 module)
 
 The code is for testing and development purposes only, and is not meant 
 for production usage. 
@@ -34,37 +33,63 @@ Not (yet) supported:
 
 Dependencies
 ------------
-- SPI needs to be enabled on the Raspberry Pi (use raspi-config)
-- WiringPi: a GPIO access library written in C for the BCM2835 
-  used in the Raspberry Pi.
-  sudo apt-get install wiringpi
-  see http://wiringpi.com
-- Run packet forwarder as root
+1. SPI needs to be enabled on the Orange Pi Zero
+ Please, check this - run command 
+ 
+ $ ls -l /dev/spidev*
+ 
+ and see result:
+ 
+crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
+crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
+ 
+ If you see in list line /dev/spidev1.0 - all OK
+
+2. You need install my modified library WiringOP-Zero
+
+git clone https://github.com/vladikoms/WiringOP-Zero.git
+cd WiringOP-Zero
+chmod +x ./build
+sudo ./build
+
+3. Run packet forwarder as root
 
 Connections
 -----------
-SX1272 - Raspberry
+SX1278 - Orange Pi Zero
 
 3.3V   - 3.3V (header pin #1) 
-GND	   - GND (pin #6)
-MISO   - MISO (pin #21)
+GND	   - GND (pin #25)
+NSS    - GPIO6 (pin #7)
+DIO0   - GPIO7 (pin #12)
+RST    - GPIO0 (pin #13)
 MOSI   - MOSI (pin #19)
+MISO   - MISO (pin #21)
 SCK    - CLK (pin #23)
-NSS    - GPIO6 (pin #22)
-DIO0   - GPIO7 (pin #7)
-RST    - GPIO0 (pin #11)
 
 Configuration
 -------------
 
 Defaults:
 
-- LoRa:   SF7 at 868.1 Mhz
+- LoRa:   SF7 at 433.9 Mhz
 - Server: 54.229.214.112, port 1700  (The Things Network: croft.thethings.girovito.nl)
 
 Edit source node (main.cpp) to change configuration (look for: "Configure these values!").
 
 Please set location, email and description.
+
+Installing
+----------
+
+git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
+cd single_chan_pkt_fwd
+make
+
+Run
+---
+
+sudo ./single_chan_pkt_fwd
 
 License
 -------
