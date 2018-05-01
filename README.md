@@ -33,8 +33,7 @@ Not (yet) supported:
 
 Dependencies
 ------------
-1. SPI needs to be enabled on the Orange Pi Zero
-  Please, check this - run command 
+1. SPI needs to be enabled on the Orange Pi Zero. Please, check this - run command 
  ```
  ls -l /dev/spidev*
  ```
