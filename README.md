@@ -34,38 +34,38 @@ Not (yet) supported:
 Dependencies
 ------------
 1. SPI needs to be enabled on the Orange Pi Zero
- Please, check this - run command 
+  Please, check this - run command 
  
- $ ls -l /dev/spidev*
+ - ls -l /dev/spidev*
  
  and see result:
  
-crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
-crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
+-crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
+-crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
  
  If you see in list line /dev/spidev1.0 - all OK
 
 2. You need install my modified library WiringOP-Zero
 
-git clone https://github.com/vladikoms/WiringOP-Zero.git
-cd WiringOP-Zero
-chmod +x ./build
-sudo ./build
+-git clone https://github.com/vladikoms/WiringOP-Zero.git
+-cd WiringOP-Zero
+-chmod +x ./build
+-sudo ./build
 
 3. Run packet forwarder as root
 
 Connections
 -----------
-SX1278 - Orange Pi Zero
+-SX1278 - Orange Pi Zero
 
-3.3V   - 3.3V (header pin #1) 
-GND	   - GND (pin #25)
-NSS    - GPIO6 (pin #7)
-DIO0   - GPIO7 (pin #12)
-RST    - GPIO0 (pin #13)
-MOSI   - MOSI (pin #19)
-MISO   - MISO (pin #21)
-SCK    - CLK (pin #23)
+- 3.3V   - 3.3V (header pin #1) 
+- GND	   - GND (pin #25)
+- NSS    - GPIO6 (pin #7)
+- DIO0   - GPIO7 (pin #12)
+- RST    - GPIO0 (pin #13)
+- MOSI   - MOSI (pin #19)
+- MISO   - MISO (pin #21)
+- SCK    - CLK (pin #23)
 
 Configuration
 -------------
