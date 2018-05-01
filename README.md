@@ -66,6 +66,13 @@ Connections
 - MISO   - MISO (pin #21)
 - SCK    - CLK (pin #23)
 
+
+Installing
+----------
+```
+git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
+```
+
 Configuration
 -------------
 
@@ -78,10 +85,9 @@ Edit source node (main.cpp) to change configuration (look for: "Configure these 
 
 Please set location, email and description.
 
-Installing
-----------
+Compile
+-------
 ```
-git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
 cd single_chan_pkt_fwd
 make
 ```
