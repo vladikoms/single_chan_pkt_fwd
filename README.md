@@ -44,7 +44,7 @@ Dependencies
  ```
  If you see in list line /dev/spidev1.0 - all OK
 
-2. You need install my modified library WiringOP-Zero
+2. You need install my modified library WiringOP-Zero https://github.com/vladikoms/WiringOP-Zero
 ```
 git clone https://github.com/vladikoms/WiringOP-Zero.git
 cd WiringOP-Zero
