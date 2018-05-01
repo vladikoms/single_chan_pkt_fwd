@@ -47,10 +47,10 @@ Dependencies
 
 2. You need install my modified library WiringOP-Zero
 
--git clone https://github.com/vladikoms/WiringOP-Zero.git
--cd WiringOP-Zero
--chmod +x ./build
--sudo ./build
+- git clone https://github.com/vladikoms/WiringOP-Zero.git
+- cd WiringOP-Zero
+- chmod +x ./build
+- sudo ./build
 
 3. Run packet forwarder as root
 
