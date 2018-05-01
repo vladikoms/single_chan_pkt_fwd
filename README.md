@@ -40,8 +40,8 @@ Dependencies
  
  and see result:
  
--crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
--crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
+- crw------- 1 root root 153, 0 Jan 11 16:31 /dev/spidev0.0
+- crw------- 1 root root 153, 1 Jan 11 16:31 /dev/spidev1.0
  
  If you see in list line /dev/spidev1.0 - all OK
 
@@ -56,7 +56,7 @@ Dependencies
 
 Connections
 -----------
--SX1278 - Orange Pi Zero
+- SX1278 - Orange Pi Zero
 
 - 3.3V   - 3.3V (header pin #1) 
 - GND	   - GND (pin #25)
@@ -82,14 +82,14 @@ Please set location, email and description.
 Installing
 ----------
 
-git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
-cd single_chan_pkt_fwd
-make
+- git clone https://github.com/vladikoms/single_chan_pkt_fwd.git
+- cd single_chan_pkt_fwd
+- make
 
 Run
 ---
 
-sudo ./single_chan_pkt_fwd
+- sudo ./single_chan_pkt_fwd
 
 License
 -------
